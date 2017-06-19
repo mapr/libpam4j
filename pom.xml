@@ -49,6 +49,17 @@
       <id>github-pages</id>
       <url>gitsite:git@github.com/kohsuke/${project.artifactId}.git</url>
     </site>
+    <!-- correct way to do this on command-line is not working -->
+    <snapshotRepository>
+      <id>mapr-snapshots</id>
+      <name>MapR Snapshots</name>
+      <url>${env.MAPR_SNAPSHOTS_REPO}</url>
+    </snapshotRepository>
+    <repository>
+      <id>mapr-releases</id>
+      <name>MapR Releases</name>
+      <url>${env.MAPR_RELEASES_REPO}</url>
+    </repository>
   </distributionManagement>
 
   <licenses>
