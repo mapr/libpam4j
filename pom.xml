@@ -31,7 +31,7 @@
 
   <artifactId>libpam4j</artifactId>
   <packaging>jar</packaging>
-  <version>1.9-SNAPSHOT</version>
+  <version>1.8-rev1</version>
   <name>Java binding for libpam.so</name>
 
   <properties>
@@ -49,17 +49,6 @@
       <id>github-pages</id>
       <url>gitsite:git@github.com/kohsuke/${project.artifactId}.git</url>
     </site>
-    <!-- correct way to do this on command-line is not working -->
-    <snapshotRepository>
-      <id>mapr-snapshots</id>
-      <name>MapR Snapshots</name>
-      <url>${env.MAPR_SNAPSHOTS_REPO}</url>
-    </snapshotRepository>
-    <repository>
-      <id>mapr-releases</id>
-      <name>MapR Releases</name>
-      <url>${env.MAPR_RELEASES_REPO}</url>
-    </repository>
   </distributionManagement>
 
   <licenses>
@@ -93,7 +82,7 @@
     <dependency>
       <groupId>net.java.dev.jna</groupId>
       <artifactId>jna</artifactId>
-      <version>4.1.0</version>
+      <version>4.5.0</version>
     </dependency>
   </dependencies>
 </project>
