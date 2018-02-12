@@ -123,7 +123,8 @@ public class PAM {
         try {
             check(libpam.pam_set_item(pht,PAM_USER,username),"pam_set_item failed");
             check(libpam.pam_authenticate(pht,0),"pam_authenticate failed");
-            check(libpam.pam_setcred(pht,0),"pam_setcred failed");
+            // MON-3281- Disabled calling pam_setcred method as a workaround
+            // check(libpam.pam_setcred(pht,0),"pam_setcred failed");
             check(libpam.pam_acct_mgmt(pht,0),"pam_acct_mgmt failed");
 
             PointerByReference r = new PointerByReference();
